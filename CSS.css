@@ -1,0 +1,140 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#4ba9e9 0, #4ba9e9 50%, #fff 100%);
+    min-height: 100vh;
+}
+.card{
+    position: relative;
+    width: 387px;
+    height: 450px;
+    background: #000;
+    display: flex;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+.card:hover{
+    width: 750px;
+}
+.card .imgBx{
+    position: relative;
+    min-width: 400px;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 2;
+}
+.card .imgBx img{
+    max-width: 250px;
+}
+.card:hover .imgBx img{
+    transform: rotate(-35deg) translate(-20px);
+}
+.card .details{
+    position: relative;
+    left: 0;
+    min-width: 300px;
+    background-color: #00b4d8;
+    display: flex;
+    justify-content: center;
+/*    align-items: center;*/
+    padding: 20px;
+    flex-direction: column;
+    z-index: 1;
+}
+.card:hover .details{
+    left: 0px;
+}
+.card .details::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #fff;
+}
+.card .details h3{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1em;
+    margin: 0;
+}
+.card .details h3 span{
+    font-size: 0.65em;
+    font-weight: 300;
+    text-transform: none;
+    opacity: .85;
+}
+.card .details h4{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1em;
+}
+.card .details p{
+    color: #fff;
+    font-size: 0.8em;
+    opacity: 0.85;
+}
+.card .details .size{
+    display: flex;
+    gap: 10px;
+}
+.card .details .size li{
+    list-style: none;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 500;
+    border: 1px solid #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.85;
+    cursor: pointer
+}
+.card .details .size li:hover{
+    color: #00b4d8;
+    opacity: 1;
+    background: #fff;
+}
+.card .details .price{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.card .details .price h2{
+    color: #fff;
+    font-weight: 600;
+    font-size: 2em;
+}
+.card .details .price h2 sup{
+    font-weight: 300;
+}
+.card .details .price h2 span{
+    font-size: 0.75em;
+}
+.card .details .price a{
+    display: inline-flex;
+    padding: 10px 20px;
+    text-decoration: none;
+    background: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #00b4d8;
+}
